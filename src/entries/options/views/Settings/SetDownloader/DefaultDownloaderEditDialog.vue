@@ -1,53 +1,58 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-import { refManualReset } from "@vueuse/core";
-import { getDownloaderIcon } from "@ptd/downloader";
 
 import { useMetadataStore } from "@/options/stores/metadata.ts";
 import type { IDefaultDownloaderConfig, TDownloaderKey } from "@/shared/types/storages/metadata.ts";
+import { useResetableRef } from "@/options/directives/useResetableRef.ts";
+import { getDownloaderIcon } from "@ptd/downloader";
 
 const showDialog = defineModel<boolean>();
 
 const { t } = useI18n();
 const metadataStore = useMetadataStore();
 
-const defaultDownloaderConfigRef = refManualReset<Required<IDefaultDownloaderConfig>>(() => ({
+const { ref: defaultDownloaderConfig, reset: resetDefaultDownloaderConfig } = useResetableRef<
+  Required<IDefaultDownloaderConfig>
+>(() => ({
   id: "",
   folder: "",
   tags: "",
 }));
 
-const suggestsRef = refManualReset<{ folder: string[]; tags: string[] }>(() => ({ folder: [], tags: [] }));
+const { ref: suggests, reset: resetSuggestions } = useResetableRef<{ folder: string[]; tags: string[] }>(
+  () => ({ folder: [], tags: [] }),
+  { shallow: true },
+);
 
 function updateDefaultDownloaderInput(downloaderId: TDownloaderKey, clean: boolean = true) {
   // 如果切换了下载器，则清空路径和标签
   if (clean) {
-    defaultDownloaderConfigRef.value.folder = "";
-    defaultDownloaderConfigRef.value.tags = "";
+    defaultDownloaderConfig.value.folder = "";
+    defaultDownloaderConfig.value.tags = "";
   }
 
   // 加载预设的下载路径和标签
-  suggestsRef.value = {
+  suggests.value = {
     folder: metadataStore.downloaders?.[downloaderId]?.suggestFolders ?? [],
     tags: metadataStore.downloaders?.[downloaderId]?.suggestTags ?? [],
   };
 }
 
 function saveDefaultDownloader() {
-  metadataStore.defaultDownloader = defaultDownloaderConfigRef.value;
+  metadataStore.defaultDownloader = defaultDownloaderConfig.value;
   metadataStore.$save();
   showDialog.value = false;
 }
 
 function enterDialog() {
   // 首先重置选项
-  defaultDownloaderConfigRef.reset();
-  suggestsRef.reset();
+  resetDefaultDownloaderConfig();
+  resetSuggestions();
 
   // 如果已经有默认下载器了，则加载它
   if (metadataStore.defaultDownloader?.id) {
-    defaultDownloaderConfigRef.value = { ...metadataStore.defaultDownloader } as Required<IDefaultDownloaderConfig>;
-    updateDefaultDownloaderInput(defaultDownloaderConfigRef.value.id!, false);
+    defaultDownloaderConfig.value = { ...metadataStore.defaultDownloader } as Required<IDefaultDownloaderConfig>;
+    updateDefaultDownloaderInput(defaultDownloaderConfig.value.id!, false);
   }
 }
 </script>
@@ -67,7 +72,7 @@ function enterDialog() {
         <v-form>
           <v-label class="ml-1 mb-1">默认下载服务器</v-label>
           <v-autocomplete
-            v-model="defaultDownloaderConfigRef.id"
+            v-model="defaultDownloaderConfig.id"
             :items="metadataStore.getEnabledDownloaders"
             :multiple="false"
             item-value="id"
@@ -92,8 +97,8 @@ function enterDialog() {
           </v-autocomplete>
 
           <!-- 如果用户已经在对应下载器的预设了下载路径和标签，则加载对应的列表 -->
-          <v-combobox v-model="defaultDownloaderConfigRef.folder" :items="suggestsRef.folder" :label="`默认下载路径`" />
-          <v-combobox v-model="defaultDownloaderConfigRef.tags" :items="suggestsRef.tags" :label="`默认下载标签`" />
+          <v-combobox v-model="defaultDownloaderConfig.folder" :items="suggests.folder" :label="`默认下载路径`" />
+          <v-combobox v-model="defaultDownloaderConfig.tags" :items="suggests.tags" :label="`默认下载标签`" />
         </v-form>
       </v-card-text>
       <v-divider />

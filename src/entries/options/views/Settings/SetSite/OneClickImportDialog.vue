@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { computed, shallowRef } from "vue";
-import { refManualReset } from "@vueuse/core";
 import { pickBy } from "es-toolkit";
 import { isEmpty } from "es-toolkit/compat";
 import { EResultParseStatus, ISiteMetadata, ISiteUserConfig, TSiteID } from "@ptd/site";
@@ -9,6 +8,7 @@ import { EResultParseStatus, ISiteMetadata, ISiteUserConfig, TSiteID } from "@pt
 import { sendMessage } from "@/messages.ts";
 import { useRuntimeStore } from "@/options/stores/runtime.ts";
 import { useMetadataStore } from "@/options/stores/metadata.ts";
+import { useResetableRef } from "@/options/directives/useResetableRef.ts";
 
 import SiteFavicon from "@/options/components/SiteFavicon/Index.vue";
 import CheckSwitchButton from "@/options/components/CheckSwitchButton.vue";
@@ -25,7 +25,7 @@ interface IImportStatus {
   failed: TSiteID[];
 }
 
-const importStatus = refManualReset<IImportStatus>(() => ({
+const { ref: importStatus, reset: resetImportStatus } = useResetableRef<IImportStatus>(() => ({
   isWorking: false,
   toWork: [],
   working: "",
@@ -135,7 +135,7 @@ async function doAutoImport() {
 }
 
 async function dialogEnter() {
-  importStatus.reset(); // 重置状态
+  resetImportStatus(); // 重置状态
   const allCanAddedSite = await getCanAddedSiteMetadata(); // 加载待添加站点
   canAddSites.value = pickBy(allCanAddedSite, (site) => site.isDead !== true) as Record<string, ISiteMetadata>;
 }
