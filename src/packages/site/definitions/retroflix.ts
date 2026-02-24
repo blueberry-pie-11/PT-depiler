@@ -19,9 +19,7 @@ export const siteMetadata: ISiteMetadata = {
   type: "private",
   schema: "NexusPHP",
 
-  urls: ["uggcf://ergebsyvk.pyho/"],
-
-  legacyUrls: ["https://retroflix.net/"],
+  urls: ["uggcf://ergebsyvk.arg/", "uggcf://ergebsyvk.pyho/"],
 
   category: [
     {
