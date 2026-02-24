@@ -184,6 +184,7 @@ export const SchemaMetadata: Partial<ISiteMetadata> = {
       // /resources/views/torrent/results.blade.php#L213-L219
       comments: {
         selector: ['a[href*="#comments"]', "i.torrent-icons__comments"],
+        filters: [{ name: "parseNumber" }], // 空值返回 0
       },
 
       status: {
