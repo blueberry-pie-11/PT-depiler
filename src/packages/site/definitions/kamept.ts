@@ -194,6 +194,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: 750 * GB,
       ratio: 3.05,
       seedingBonus: 400000,
+      isKept: true,
       privilege: "得到两个邀请名额；可以查看其它用户的评论、帖子历史。Veteran User及以上用户会永远保留账号。",
     },
     {
@@ -203,6 +204,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: 1 * TB,
       ratio: 3.55,
       seedingBonus: 600000,
+      isKept: true,
       privilege: "得到两个邀请名额；可以更新过期的外部信息；可以查看Extreme User论坛。",
     },
     {
@@ -212,6 +214,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: 1.5 * TB,
       ratio: 4.05,
       seedingBonus: 800000,
+      isKept: true,
       privilege: "得到五个邀请名额。",
     },
     {
@@ -221,6 +224,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: 3 * TB,
       ratio: 4.55,
       seedingBonus: 1000000,
+      isKept: true,
       privilege: "得到十个邀请名额。",
     },
     {

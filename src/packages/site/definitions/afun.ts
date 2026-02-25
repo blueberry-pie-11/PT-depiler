@@ -230,6 +230,7 @@ export const siteMetadata: ISiteMetadata = {
     {
       id: 5,
       name: "Veteran User",
+      isKept: true,
       privilege: "得到三个邀请名额；可以查看其它用户的评论、帖子历史。Veteran User及以上用户会永远保留账号。",
       interval: "P40W",
       downloaded: "750GB",
@@ -239,6 +240,7 @@ export const siteMetadata: ISiteMetadata = {
     {
       id: 6,
       name: "Extreme User",
+      isKept: true,
       privilege: "可以更新过期的外部信息；可以查看Extreme User论坛。",
       interval: "P60W",
       downloaded: "1024GB",
@@ -248,6 +250,7 @@ export const siteMetadata: ISiteMetadata = {
     {
       id: 7,
       name: "Ultimate User",
+      isKept: true,
       privilege: "得到五个邀请名额。",
       interval: "P80W",
       downloaded: "1536GB",
@@ -257,6 +260,7 @@ export const siteMetadata: ISiteMetadata = {
     {
       id: 8,
       name: "Nexus Master",
+      isKept: true,
       privilege: "得到十个邀请名额。",
       interval: "P100W",
       downloaded: "3072GB",

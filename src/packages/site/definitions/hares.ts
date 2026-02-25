@@ -77,6 +77,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "4TB",
       ratio: 4.5,
       seedingBonus: 800000,
+      isKept: true,
       privilege:
         "得到六个邀请名额；可以更新过期的外部信息；可以查看Extreme User论坛。Extreme User用户封存后将永远保留账号",
     },
@@ -87,6 +88,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "6TB",
       ratio: 5,
       seedingBonus: 1000000,
+      isKept: true,
       privilege: "得到八个邀请名额",
     },
     {
@@ -96,6 +98,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "8TB",
       ratio: 5.5,
       seedingBonus: 1200000,
+      isKept: true,
       privilege: "得到十个邀请名额。Nexus Master用户会永远保留账号",
     },
   ],

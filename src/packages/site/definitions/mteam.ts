@@ -116,6 +116,7 @@ const levelRequirements: (ILevelRequirement & { levelId?: string })[] = [
     interval: "P24W",
     downloaded: "2000GB",
     ratio: 7,
+    isKept: true,
     privilege: "魔力值加成：+6%；永遠保留",
   },
   {
@@ -124,6 +125,7 @@ const levelRequirements: (ILevelRequirement & { levelId?: string })[] = [
     interval: "P28W",
     downloaded: "2500GB",
     ratio: 8,
+    isKept: true,
     privilege: "魔力值加成：+7%",
   },
   {
@@ -132,6 +134,7 @@ const levelRequirements: (ILevelRequirement & { levelId?: string })[] = [
     interval: "P32W",
     downloaded: "3000GB",
     ratio: 9,
+    isKept: true,
     privilege: "魔力值加成：+8%",
   },
   {

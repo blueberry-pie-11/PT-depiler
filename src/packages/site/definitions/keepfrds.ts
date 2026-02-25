@@ -319,6 +319,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "1TB",
       ratio: 3.5,
       bonus: 640000,
+      isKept: true,
       privilege: "查看其它用户的评论、帖子历史；永远保留账号",
     },
     {
@@ -328,6 +329,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "2TB",
       ratio: 4.0,
       bonus: 1280000,
+      isKept: true,
       privilege: "上传量按照等级对应的限速计算",
     },
     {
@@ -337,6 +339,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "3TB",
       ratio: 4.5,
       bonus: 1920000,
+      isKept: true,
       privilege: "上传速度限制提升为普通用户的二倍",
     },
     {
@@ -346,6 +349,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "4TB",
       ratio: 5,
       bonus: 2560000,
+      isKept: true,
       privilege: "除了数据考核要求，其他权利等同于VIP，包括没有上传速度的限制",
     },
     {

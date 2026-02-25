@@ -118,6 +118,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "750GB",
       ratio: 3.05,
       seedingBonus: 400000,
+      isKept: true,
       privilege:
         "首次升级获得6个永久邀请名额。可以查看他人的评论和帖子历史记录。化神(Veteran User)及以上等级用户会永远保留帐号。",
     },
@@ -129,6 +130,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "1024GB",
       ratio: 3.55,
       seedingBonus: 600000,
+      isKept: true,
       privilege: "首次升级获得8个永久邀请名额。",
     },
     {
@@ -139,6 +141,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "1536GB",
       ratio: 4.05,
       seedingBonus: 800000,
+      isKept: true,
       privilege: "首次升级获得10个永久邀请名额。可以查看种子文件结构。",
     },
     {
@@ -149,6 +152,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "3072GB",
       ratio: 4.55,
       seedingBonus: 1000000,
+      isKept: true,
       privilege: "首次升级获得20个永久邀请名额。普通用户可以达到的最高级别。",
     },
   ],

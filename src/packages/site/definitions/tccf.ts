@@ -127,6 +127,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P38W",
       downloaded: "1TB",
       ratio: 3.05,
+      isKept: true,
       privilege: "可以发送邀请; 上校及以上用户会永远保留账号.",
     },
     {
@@ -136,6 +137,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P54W",
       downloaded: "2TB",
       ratio: 3.55,
+      isKept: true,
       privilege: "可以查看种子文件结构.",
     },
     {
@@ -145,6 +147,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P70W",
       downloaded: "4TB",
       ratio: 4.05,
+      isKept: true,
       privilege: "可以查看其它用户的评论、帖子历史;得到五个邀请名额.",
     },
     {
@@ -154,6 +157,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P88W",
       downloaded: "8TB",
       ratio: 4.55,
+      isKept: true,
       privilege: "得到十个邀请名额.",
     },
     {

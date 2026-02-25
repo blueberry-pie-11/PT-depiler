@@ -215,6 +215,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "8192GB",
       ratio: 6.0,
       seedingBonus: 1008000,
+      isKept: true,
       privilege: "得到五个邀请名额。Nexus Master及以上用户会永远保留账号。",
     },
   ],

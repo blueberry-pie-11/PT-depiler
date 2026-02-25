@@ -312,6 +312,7 @@ export const siteMetadata: ISiteMetadata = {
       ratio: 3.05,
       interval: "P40W",
       downloaded: "750GB",
+      isKept: true,
       privilege: "Veteran User及以上用户会永远保留账号。",
     },
     {
@@ -322,6 +323,7 @@ export const siteMetadata: ISiteMetadata = {
       ratio: 3.55,
       interval: "P60W",
       downloaded: "1TB",
+      isKept: true,
       privilege: "允许使用个性条；可以查看NFO文档。",
     },
     {
@@ -332,6 +334,7 @@ export const siteMetadata: ISiteMetadata = {
       ratio: 4.05,
       interval: "P80W",
       downloaded: "1.5TB",
+      isKept: true,
       privilege: "可以请求续种；得到一个邀请名额。",
     },
     {
@@ -342,6 +345,7 @@ export const siteMetadata: ISiteMetadata = {
       ratio: 4.55,
       interval: "P100W",
       downloaded: "3TB",
+      isKept: true,
       privilege: "可以查看种子结构；得到两个邀请名额。",
     },
     {

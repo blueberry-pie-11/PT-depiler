@@ -124,7 +124,8 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P4W",
       downloaded: "50GB",
       ratio: 1.05,
-      privilege: '得到一个邀请名额；可以直接发布种子；可以查看NFO文档；可以查看用户列表；可以请求续种； 可以发送邀请； 可以查看排行榜；可以查看其它用户的种子历史(如果用户隐私等级未设置为"强")； 可以删除自己上传的字幕。',
+      privilege:
+        '得到一个邀请名额；可以直接发布种子；可以查看NFO文档；可以查看用户列表；可以请求续种； 可以发送邀请； 可以查看排行榜；可以查看其它用户的种子历史(如果用户隐私等级未设置为"强")； 可以删除自己上传的字幕。',
     },
     {
       id: 4,
@@ -156,6 +157,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P25W",
       downloaded: "1024GB",
       ratio: 3.05,
+      isKept: true,
       privilege: "得到三个邀请名额；可以查看其它用户的评论、帖子历史。Veteran User及以上用户会永远保留账号。",
     },
     {
@@ -164,6 +166,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P40W",
       downloaded: "1TB",
       ratio: 3.55,
+      isKept: true,
       privilege: "可以更新过期的外部信息；可以查看Extreme User论坛。",
     },
     {
@@ -172,6 +175,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P60W",
       downloaded: "1.5TB",
       ratio: 4.05,
+      isKept: true,
       privilege: "得到五个邀请名额。",
     },
     {
@@ -180,6 +184,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P80W",
       downloaded: "4TB",
       ratio: 5.05,
+      isKept: true,
       privilege: "得到十个邀请名额。",
     },
     {

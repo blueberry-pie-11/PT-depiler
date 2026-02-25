@@ -75,6 +75,7 @@ const levelRequirements: ILevelRequirement[] = [
     interval: "P24W",
     downloaded: "2TB",
     ratio: 7,
+    isKept: true,
     privilege: "此等级及以上用户，账号将永久保留",
   },
   {
@@ -83,6 +84,7 @@ const levelRequirements: ILevelRequirement[] = [
     interval: "P28W",
     downloaded: "2.5TB",
     ratio: 8,
+    isKept: true,
     privilege: "无",
   },
   {
@@ -91,6 +93,7 @@ const levelRequirements: ILevelRequirement[] = [
     interval: "P32W",
     downloaded: "3TB",
     ratio: 9,
+    isKept: true,
     privilege: "无",
   },
 ];

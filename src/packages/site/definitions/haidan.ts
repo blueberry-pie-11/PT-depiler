@@ -200,6 +200,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "50GB",
       ratio: 1.0,
       seedingBonus: 2000,
+      isKept: true,
       privilege: "Veteran User永远保留账号，并拥有低于该等级以下权限。",
     },
     {
@@ -209,6 +210,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "50GB",
       ratio: 1.0,
       seedingBonus: 5000,
+      isKept: true,
       privilege: "查看日志权限，并拥有低于该等级以下权限。",
     },
     {
@@ -218,6 +220,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "50GB",
       ratio: 1.0,
       seedingBonus: 8000,
+      isKept: true,
       privilege: "查看排行榜，并拥有低于该等级以下权限",
     },
     {
@@ -227,6 +230,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "50GB",
       ratio: 1.0,
       seedingBonus: 10000,
+      isKept: true,
       privilege: "允许匿名，拥有发布主题推荐权限，并拥有低于该等级以下权限",
     },
     // VIP以上等级通过系统智能识别机制自动处理，不在此处配置详细权限信息

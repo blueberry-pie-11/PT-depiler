@@ -79,6 +79,7 @@ const levelRequirements: ISiteMetadata["levelRequirements"] = [
     name: "Veteran User",
     nameAka: ["妙蛙花"],
     interval: "P52W",
+    isKept: true,
     privilege: "得到4个邀请名额；可以查看其它用户的评论、帖子历史。Veteran User及以上用户会永远保留账号。",
     alternative: [
       { seedingBonus: 200000, ratio: 1.0, uploads: 500 },
@@ -91,6 +92,7 @@ const levelRequirements: ISiteMetadata["levelRequirements"] = [
     name: "Extreme User",
     nameAka: ["mega妙蛙花"],
     interval: "P60W",
+    isKept: true,
     privilege: "得到4个邀请名额；可以更新过期的外部信息。",
     alternative: [
       { seedingBonus: 280000, ratio: 1.0, uploads: 650 },
@@ -103,6 +105,7 @@ const levelRequirements: ISiteMetadata["levelRequirements"] = [
     name: "Ultimate User",
     nameAka: ["极巨化妙蛙花"],
     interval: "P100W",
+    isKept: true,
     privilege: "得到5个邀请名额。",
     alternative: [
       { seedingBonus: 400000, ratio: 1.0, uploads: 800 },
@@ -114,6 +117,7 @@ const levelRequirements: ISiteMetadata["levelRequirements"] = [
     groupType: "user",
     name: "SVIP",
     nameAka: ["闪光妙蛙花"],
+    isKept: true,
     privilege: "网站元老用户，和VIP权限完全相同，免除自动降级，但计算下载量。",
   },
   {

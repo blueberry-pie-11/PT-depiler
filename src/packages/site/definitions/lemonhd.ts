@@ -105,6 +105,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P45W",
       downloaded: "8TB",
       ratio: 5.0,
+      isKept: true,
       privilege:
         "Ultimate User及以上用户会永远保留账号，但不等于不会被封禁。此等级以上（含）免除站点定期进行的数据增量考核。",
     },
@@ -114,6 +115,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P65W",
       downloaded: "10TB",
       ratio: 5.5,
+      isKept: true,
       privilege:
         "被视为站点精英成员，免除站点数据增量考核，永久保留账号；可以直接发布种子；可以查看排行榜；可以在网站开放邀请期间发送邀请，管理员设置的特殊情况除外；",
     },

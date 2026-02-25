@@ -130,6 +130,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "2TB",
       ratio: 4.5,
       seedingBonus: 600000,
+      isKept: true,
       privilege: "可以更新过期的外部信息。游戏大仙(Extreme User)及以上用户会永远保留账号。",
     },
     {
@@ -139,6 +140,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "5TB",
       ratio: 5,
       seedingBonus: 800000,
+      isKept: true,
       privilege: "这个等级会永远保留账号。",
     },
     {
@@ -148,6 +150,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "10TB",
       ratio: 5.5,
       seedingBonus: 1000000,
+      isKept: true,
       privilege: "这个等级会永远保留账号。",
     },
     {

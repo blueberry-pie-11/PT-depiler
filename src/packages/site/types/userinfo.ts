@@ -67,7 +67,17 @@ export interface ILevelRequirement extends IImplicitUserInfo {
   id: TLevelId; // 等级序列，应该是一个递增的序列，不可重复，应当小于 MaxUserLevelId - 1
   name: TLevelName; // 需要与 IUserInfo中对应的 levelName 相同
   nameAka?: TLevelName[]; // 该等级的别名，通常用在i18n环境中，name 和 nameAka[*] 的值会同步用来 判断 LevelId
+
   groupType?: TLevelGroupType; // 等级组别，不指定的话，默认为 user
+
+  /**
+   * 当 groupType 为 user 时，指明该等级符合保号要求
+   * 注意：1、大于该等级的 user group 都需要声明该参数，否则会默认不符合保级要求
+   *      2、vip 和 manager 组别的等级不需要声明该参数，因为它们不参与保级要求的计算
+   *      3、封存后保号不属于该范畴
+   */
+  isKept?: boolean;
+
   privilege?: string; // 获得的特权说明
 
   alternative?: IImplicitUserInfo[]; // 可选要求

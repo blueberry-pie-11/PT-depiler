@@ -69,6 +69,7 @@ const levelRequirements: (ILevelRequirement & { levelId?: number })[] = [
     interval: "P24W",
     uploaded: "5TB",
     ratio: 2.5,
+    isKept: true,
     privilege: "主天使及以上市民会永远保留账号。",
   },
   {
@@ -77,6 +78,7 @@ const levelRequirements: (ILevelRequirement & { levelId?: number })[] = [
     interval: "P36W",
     uploaded: "10TB",
     ratio: 2.6,
+    isKept: true,
     privilege: "",
   },
   {
@@ -85,6 +87,7 @@ const levelRequirements: (ILevelRequirement & { levelId?: number })[] = [
     interval: "P72W",
     uploaded: "20TB",
     ratio: 2.8,
+    isKept: true,
     privilege: "比较牛逼的等级。",
   },
   {
@@ -93,47 +96,56 @@ const levelRequirements: (ILevelRequirement & { levelId?: number })[] = [
     interval: "P100W",
     uploaded: "40TB",
     ratio: 4.0,
+    isKept: true,
     privilege: "最牛逼的市民，或特殊任务分配。",
   },
   {
     id: 9,
     name: "壕(VIP)",
+    groupType: "vip",
     privilege: "管理员分配，捐助的市民，或自行以魅力值兑换获得。免除自动降级无视分享率。",
   },
   {
     id: 10,
     name: "隐天使(Retiree)",
+    groupType: "manager",
     privilege: "退休后的管理组成员。",
   },
   {
     id: 11,
     name: "射种天使(Uploader)",
+    groupType: "manager",
     privilege: "专注的发布者。工作组。可以查看匿名。",
   },
   {
     id: 12,
     name: "论坛版主(Forum Moderator)",
+    groupType: "manager",
     privilege: "论坛管理者。可以制定在任版块的版规、管理主题和帖子。",
   },
   {
     id: 13,
     name: "总版主(Moderator)",
+    groupType: "manager",
     privilege:
       "可以查看管理组信箱、举报信箱；管理趣味盒内容、投票内容；可以编辑或删除任何发布的种子及字幕；可以管理候选；可以管理论坛帖子、用户评论；可以查看机密日志；可以管理日志中的代码、史册；可以查看用户的邀请记录；可以管理用户帐号的一般信息；可以将种子设为置顶或促销；可以查看用户IP或Email等机密信息。不能管理友情链接、最近消息；不能删除账号。",
   },
   {
     id: 14,
     name: "管理员(Administrator)",
+    groupType: "manager",
     privilege: "各种日常管理，可以做任何修改。",
   },
   {
     id: 15,
     name: "守护天使(Sysop)",
+    groupType: "manager",
     privilege: "网站开发/维护人员，可以做任何修改。",
   },
   {
     id: 16,
     name: "市长(Mayor)",
+    groupType: "manager",
     privilege: "灵魂。",
   },
 ];

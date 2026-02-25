@@ -335,6 +335,7 @@ export const siteMetadata: ISiteMetadata = {
       },
     },
   },
+
   levelRequirements: [
     {
       id: 1,

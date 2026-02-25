@@ -131,6 +131,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P20W",
       downloaded: "500GB",
       ratio: 5.5,
+      isKept: true,
       privilege: "可以查看排行榜；可以查看其它用户的评论、帖子历史。大学讲师及以上用户会永远保留账号。",
     },
     {
@@ -139,6 +140,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P30W",
       downloaded: "700GB",
       ratio: 6.5,
+      isKept: true,
       privilege: "可以更新过期的外部信息；可以查看晋升副教论坛。",
     },
     {
@@ -147,6 +149,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P80W",
       downloaded: "900GB",
       ratio: 7.5,
+      isKept: true,
       privilege: "更加高级。",
     },
     {
@@ -155,6 +158,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P100W",
       downloaded: "1TB",
       ratio: 8.5,
+      isKept: true,
       privilege: "更加高级。",
     },
     {

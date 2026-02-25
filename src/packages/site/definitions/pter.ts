@@ -403,6 +403,7 @@ export const siteMetadata: ISiteMetadata = {
         { seedingBonus: 2400000, uploads: 100 },
         { seedingBonus: 9600000, uploads: 10 },
       ],
+      isKept: true,
       privilege: "用户不会因不活跃原因被临时封禁，初次升级赠送3枚永久邀请码",
     },
   ],

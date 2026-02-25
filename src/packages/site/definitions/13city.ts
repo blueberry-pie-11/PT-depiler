@@ -220,6 +220,7 @@ export const siteMetadata: ISiteMetadata = {
       seedingBonus: 500000,
       downloaded: "3072GB",
       ratio: 3.05,
+      isKept: true,
       privilege:
         "首次升级至此等级的用户将获得3个邀请名额；可以查看其它用户的评论、帖子历史。游刃有余及以上用户会永远保留账号。",
     },
@@ -231,6 +232,7 @@ export const siteMetadata: ISiteMetadata = {
       seedingBonus: 1000000,
       downloaded: "4096GB",
       ratio: 3.55,
+      isKept: true,
       privilege: "可以更新过期的外部信息；可以查看Extreme User论坛。",
     },
     {
@@ -241,6 +243,7 @@ export const siteMetadata: ISiteMetadata = {
       seedingBonus: 1550000,
       downloaded: "6144GB",
       ratio: 4.05,
+      isKept: true,
       privilege: "首次升级至此等级的用户将获得5个邀请名额。",
     },
     {
@@ -251,6 +254,7 @@ export const siteMetadata: ISiteMetadata = {
       seedingBonus: 2400000,
       downloaded: "8192GB",
       ratio: 4.55,
+      isKept: true,
       privilege: "首次升级至此等级的用户将获得10个邀请名额。",
     },
     {

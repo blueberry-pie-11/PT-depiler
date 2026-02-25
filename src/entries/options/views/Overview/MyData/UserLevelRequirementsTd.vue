@@ -3,17 +3,10 @@ import { computed } from "vue";
 import { computedAsync } from "@vueuse/core";
 import { isEmpty } from "es-toolkit/compat";
 import { useDisplay } from "vuetify";
-import {
-  convertIsoDurationToDate,
-  getNextLevelUnMet,
-  guessUserLevelGroupType,
-  type IUserInfo,
-  type TLevelGroupType,
-} from "@ptd/site";
+import { getNextLevelUnMet, guessUserLevelGroupType, type IUserInfo, type TLevelGroupType } from "@ptd/site";
 
 import { useMetadataStore } from "@/options/stores/metadata.ts";
 import { useConfigStore } from "@/options/stores/config.ts";
-import { formatDate } from "@/options/utils.ts";
 
 import UserLevelsComponent from "./UserLevelsComponent.vue";
 import UserNextLevelUnMet from "@/options/views/Overview/MyData/UserNextLevelUnMet.vue";
@@ -21,8 +14,6 @@ import UserNextLevelUnMet from "@/options/views/Overview/MyData/UserNextLevelUnM
 const { userInfo } = defineProps<{
   userInfo: IUserInfo;
 }>();
-
-const currentTime = +new Date();
 
 const display = useDisplay();
 const configStore = useConfigStore();
@@ -44,9 +35,9 @@ const levelName = computed(() => {
   return matchedLevelRequirements.value?.name ?? userInfo.levelName;
 });
 
-const nextLevelUnMet = computedAsync(() => getNextLevelUnMet(userInfo, userLevelRequirements.value!), {});
+const nextLevelUnMet = computed(() => getNextLevelUnMet(userInfo, userLevelRequirements.value!));
 
-const userLevelGroupType = computedAsync(() => {
+const userLevelGroupType = computed(() => {
   // 首先尝试从 matchedLevelRequirements 中找到对应的等级组
   if (matchedLevelRequirements.value?.groupType) {
     return matchedLevelRequirements.value.groupType;
@@ -54,7 +45,22 @@ const userLevelGroupType = computedAsync(() => {
 
   // 如果还是没有，则考虑从用户等级名中猜测
   return guessUserLevelGroupType(userInfo.levelName ?? "user");
-}, "user");
+});
+
+const currentUserLevelColor = computed(() => {
+  switch (userLevelGroupType.value) {
+    case "vip":
+      return "green";
+    case "manager":
+      return "indigo";
+    case "user": {
+      if (matchedLevelRequirements.value?.isKept) return "light-blue"; // 保号用户
+      return "";
+    }
+    default:
+      return "";
+  }
+});
 
 const userLevelGroupIconMap: Record<TLevelGroupType, string> = {
   user: "mdi-account-hard-hat",
@@ -80,8 +86,8 @@ const userLevelGroupIcon = computed(() => {
     >
       <template v-slot:activator="{ props }">
         <span v-bind="props">
-          <v-icon :icon="userLevelGroupIcon" size="small"></v-icon>
-          {{ levelName }}
+          <v-icon :icon="userLevelGroupIcon" size="small" :color="currentUserLevelColor" class="mr-1" />
+          <span :class="`text-${currentUserLevelColor}`">{{ levelName }}</span>
           <v-icon
             v-if="
               configStore.myDataTableControl.showNextLevelInTable &&
@@ -92,8 +98,8 @@ const userLevelGroupIcon = computed(() => {
             color="green"
             size="small"
             class="ml-1"
-          ></v-icon
-          ><br />
+          />
+          <br />
           <template
             v-if="
               configStore.myDataTableControl.showNextLevelInTable &&

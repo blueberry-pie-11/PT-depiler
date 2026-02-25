@@ -191,6 +191,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "3TB",
       ratio: 4.55,
       seedingBonus: 1500000,
+      isKept: true,
       privilege: "得到10个邀请名额,殿堂尊者及以上用户会永远保留账号。",
     },
   ],

@@ -191,6 +191,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "3TB",
       ratio: 4.55,
       seedingBonus: 1500000,
+      isKept: true,
       privilege: "传说训练家(NM)及以上用户会永远保留账号。",
     },
   ],

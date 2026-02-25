@@ -88,6 +88,7 @@ const newUserLevelRequirements: ILevelRequirement[] = [
     downloaded: "8TB",
     ratio: 5.0,
     bonus: 3500000,
+    isKept: true,
     privilege: "永远保留账号",
   },
   {
@@ -97,6 +98,7 @@ const newUserLevelRequirements: ILevelRequirement[] = [
     downloaded: "10TB",
     ratio: 5.5,
     bonus: 5000000,
+    isKept: true,
     privilege: "直接发布种子；可以查看排行榜；在网站开放邀请期间发送邀请",
   },
 ];

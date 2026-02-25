@@ -284,6 +284,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "3TB",
       ratio: 8.0,
       bonus: 3500000,
+      isKept: true,
       privilege: "首次升级赠送邀请2枚，保留帐号，在官方活动期间可发放邀请；Ultimate User及以上等级用户会永远保留；",
     },
     {
@@ -293,6 +294,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "4TB",
       ratio: 10,
       bonus: 5000000,
+      isKept: true,
       privilege: "首次升级赠送邀请3枚，保留帐号，在官方活动期间可发放邀请；",
     },
   ],

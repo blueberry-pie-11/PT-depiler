@@ -263,6 +263,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "2TB",
       ratio: 4.5,
       seedingBonus: 720000,
+      isKept: true,
       privilege: "Extreme User及以上用户会永远保留账号。",
     },
     {
@@ -272,6 +273,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "4TB",
       ratio: 5.0,
       seedingBonus: 1200000,
+      isKept: true,
       privilege: "无",
     },
     {
@@ -281,6 +283,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "8TB",
       ratio: 5.5,
       seedingBonus: 1680000,
+      isKept: true,
       privilege: "无",
     },
   ],

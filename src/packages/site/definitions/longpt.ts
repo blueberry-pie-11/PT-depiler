@@ -162,6 +162,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "2TB",
       ratio: 6,
       seedingBonus: 400000,
+      isKept: true,
       privilege: "得到一个邀请名额；可以查看其它用户的评论、帖子历史。棘龙及以上用户会永远保留账号。",
     },
     {
@@ -171,6 +172,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "3TB",
       ratio: 7,
       seedingBonus: 700000,
+      isKept: true,
       privilege: "得到一个邀请名额；可以更新过期的外部信息；可以查看Extreme User论坛。",
     },
     {
@@ -180,6 +182,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "4TB",
       ratio: 8,
       seedingBonus: 1200000,
+      isKept: true,
       privilege: "得到两个邀请名额。",
     },
     {
@@ -189,6 +192,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "5TB",
       ratio: 9,
       seedingBonus: 1600000,
+      isKept: true,
       privilege: "得到三个邀请名额。",
     },
   ],

@@ -247,6 +247,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P100W",
       downloaded: "3072GB",
       ratio: 4.55,
+      isKept: true,
       privilege: "账号永久保留",
     },
     {

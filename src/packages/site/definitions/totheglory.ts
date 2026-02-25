@@ -373,6 +373,7 @@ export const siteMetadata: ISiteMetadata = {
       interval: "P32W",
       downloaded: "3.5TB",
       ratio: 5.0,
+      isKept: true,
       privilege: "永远保留账号",
     },
     {
@@ -382,6 +383,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "5TB",
       uploaded: "50TB",
       ratio: 6.0,
+      isKept: true,
       privilege: "无",
     },
     {
@@ -391,6 +393,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "10TB",
       uploaded: "100TB",
       ratio: 6.0,
+      isKept: true,
       privilege: "无",
     },
     {

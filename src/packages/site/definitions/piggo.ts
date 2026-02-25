@@ -234,6 +234,7 @@ export const siteMetadata: ISiteMetadata = {
       downloaded: "6TB",
       ratio: 6,
       seedingBonus: 1000000,
+      isKept: true,
       privilege: "得到五个邀请名额，天蓬元帅及以上账号永久保留。",
     },
   ],
