@@ -292,6 +292,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 500,
       interval: "P3Y",
       seedingTime: "P250000D",
+      isKept: true,
       privilege:
         "Has access to the Overlord forum, Custom Title, Unlimited Invites, and immunity from Inactivity Pruning.",
     },

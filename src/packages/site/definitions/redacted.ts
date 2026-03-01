@@ -108,6 +108,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 5,
       uploaded: "25GB",
       ratio: 0.65,
+      isKept: true,
       privilege: "Invites forums; Immunity from inactivity disabling",
     },
     {
@@ -117,6 +118,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 50,
       uploaded: "100GB",
       ratio: 0.65,
+      isKept: true,
       privilege: "",
     },
     {
@@ -126,6 +128,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 500,
       uploaded: "500GB",
       ratio: 0.65,
+      isKept: true,
       privilege: "Unlimited invites",
     },
     {
@@ -135,6 +138,7 @@ export const siteMetadata: ISiteMetadata = {
       uniqueGroups: 500,
       uploaded: "500GB",
       ratio: 0.65,
+      isKept: true,
       privilege: "",
     },
     {
@@ -144,6 +148,7 @@ export const siteMetadata: ISiteMetadata = {
       perfectFlacs: 500,
       uploaded: "500GB",
       ratio: 0.65,
+      isKept: true,
       privilege: "",
     },
   ],

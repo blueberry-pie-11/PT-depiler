@@ -262,6 +262,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 1,
       trueDownloaded: "200GB",
       ratio: 1.2,
+      isKept: true,
       privilege: "免疫账号不活跃；发送邀请；赠送1枚邀请；访问论坛的「求邀区」「发邀区」「Power User」",
     },
     {
@@ -271,6 +272,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 25,
       trueDownloaded: "500GB",
       ratio: 1.2,
+      isKept: true,
       privilege: "赠送1枚邀请；访问论坛的「Elite」；检查自己发布的种子；编辑所有种子",
     },
     {
@@ -280,6 +282,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 100,
       trueDownloaded: "1TB",
       ratio: 1.2,
+      isKept: true,
       privilege: "赠送2枚邀请；每月获赠1枚临时邀请；访问论坛的「Torrent Master」",
     },
     {
@@ -290,6 +293,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 250,
       trueDownloaded: "2TB",
       ratio: 1.2,
+      isKept: true,
       privilege: "赠送2枚邀请；每月获赠2枚临时邀请；检查所有种子",
     },
     {
@@ -300,6 +304,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 500,
       trueDownloaded: "5TB",
       ratio: 1.2,
+      isKept: true,
       privilege: "赠送3枚邀请；每月获赠3枚临时邀请；访问论坛的「Elite Torrent Master」",
     },
     {
@@ -309,6 +314,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 1000,
       trueDownloaded: "10TB",
       ratio: 1.2,
+      isKept: true,
       privilege: "无限邀请；访问论坛的「Guru」；查看种子检查日志",
     },
   ],

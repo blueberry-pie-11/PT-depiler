@@ -37,6 +37,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 10,
       uploaded: "25GB",
       ratio: 0.7,
+      isKept: true,
       privilege: "访问邀请区，每月固定邀请名额，免于非活动修剪",
     },
     {
@@ -46,6 +47,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 50,
       uploaded: "100GB",
       ratio: 0.8,
+      isKept: true,
       privilege: "",
     },
     {
@@ -55,6 +57,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 100,
       uploaded: "500GB",
       ratio: 0.9,
+      isKept: true,
       privilege: "超出用户限制也可以发送邀请",
     },
     {
@@ -64,6 +67,7 @@ export const siteMetadata: ISiteMetadata = {
       uploads: 500,
       uploaded: "1TB",
       ratio: 1.0,
+      isKept: true,
       privilege: "",
     },
   ],

@@ -218,6 +218,7 @@ export const siteMetadata: ISiteMetadata = {
     {
       id: 1,
       name: "User",
+      isKept: true,
       privilege: "Can download/upload.",
     },
     {
@@ -227,6 +228,7 @@ export const siteMetadata: ISiteMetadata = {
       uploaded: "10GB",
       ratio: 0.7,
       downloaded: "1KB",
+      isKept: true,
       privilege:
         "Can use invites, notifications, set a forum signature, access the Top 10 and edit the Knowledge base.",
     },
@@ -238,6 +240,7 @@ export const siteMetadata: ISiteMetadata = {
       ratio: 1.05,
       downloaded: "1KB",
       uploads: 5,
+      isKept: true,
       privilege:
         "advanced Top 10, can view torrent snatched list, edit torrent's description, " +
         "original title and release date and access the advanced user search. " +

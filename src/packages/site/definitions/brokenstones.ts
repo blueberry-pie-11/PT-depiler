@@ -156,6 +156,7 @@ export const siteMetadata: ISiteMetadata = {
       uploaded: "50GB",
       uploads: 1,
       ratio: 1.05,
+      isKept: true,
       privilege: "Receives invites, create new collages, immune from inactivity disabling",
     },
     {
@@ -165,6 +166,7 @@ export const siteMetadata: ISiteMetadata = {
       uploaded: "75GB",
       uploads: 10,
       ratio: 1.05,
+      isKept: true,
       privilege: "Can upload freeware (set to Neutral Leech)",
     },
     {
@@ -174,6 +176,7 @@ export const siteMetadata: ISiteMetadata = {
       uploaded: "100GB",
       uploads: 50,
       ratio: 1.05,
+      isKept: true,
       privilege: "Top 10 filters & Can edit any torrent and any torrent group.",
     },
     {
