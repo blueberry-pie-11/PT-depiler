@@ -1,14 +1,18 @@
 import { onMessage, sendMessage } from "@/messages.ts";
 
 onMessage("updateDNRSessionRules", async ({ data: { rule, extOnly = true } }) => {
-  // 不影响其他非本扩展的网络请求：将规则正向圈定到本扩展页面发起的请求
-  // （offscreen/options 等扩展上下文发起的请求，其 initiator 为 chrome-extension://<id>，可用扩展 ID 表示）。
+  // 将规则正向圈定到本扩展发起的请求，避免误改普通网页的请求头（见 #1465）。
   //
-  // 此前采用 excludedTabIds 快照方案（排除安装规则时已存在的非扩展标签页），存在两个缺陷（见 #1465）：
-  // 1. 快照过期：之后新开的标签页不在豁免名单内，其中命中 urlFilter 的请求会被误改请求头；
-  // 2. urlFilter 为无锚点子串匹配：规则中的 URL 片段可能命中完全无关的请求，放大误伤面。
+  // DNR 的 initiatorDomains 按「请求 initiator 的 host」匹配。两浏览器下扩展自身上下文
+  // （background/offscreen/options 等）发起的请求，其 initiator host 均等于扩展自身 origin 的 host：
+  // - Chrome：chrome-extension://<id>，host 即 chrome.runtime.id；
+  // - Firefox：moz-extension://<uuid>，host 是扩展的 moz-extension UUID。而 chrome.runtime.id 返回
+  //   manifest 声明的 gecko.id（本扩展为 ptdepiler.ptplugins@gmail.com），与 UUID 并不相同（也非合法
+  //   domain），规则将永不命中，导致扩展发起的 unsafe header 请求（如 M-Team 校验所需的 Origin 头）
+  //   在 Firefox 中全部失效（见 #1486）。因此 Firefox 侧取 new URL(chrome.runtime.getURL("")).host
+  //   作为匹配值（在任何扩展上下文均可计算，不依赖 location）。
   if (extOnly) {
-    rule.condition.initiatorDomains = [chrome.runtime.id];
+    rule.condition.initiatorDomains = [__BROWSER__ === "firefox" ? new URL(chrome.runtime.getURL("")).host : chrome.runtime.id];
     delete rule.condition.excludedTabIds;
   }
 
